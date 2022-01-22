@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background-color: orchid;
 }
 
 .container {
@@ -56,4 +57,5 @@ header {
 
 footer {
     text-align: center;
+    background-color: orchid;
 }
