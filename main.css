@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    border: 1px solid red;
+}
+
+header {
+    height: 70px;
+    justify-content: space-between;
+}
