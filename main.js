@@ -15,7 +15,7 @@ function writeCSSdesc() {
 }
 
 function writeJSdesc() {
-    description.innerText = "Interactive websites with Javascript 6!";
+    description.innerText = "Javascript 6!";
 }
 
 htmlBadge.addEventListener('mouseover', writeHTMLdesc);

@@ -206,3 +206,30 @@ footer {
     align-items: center;
     justify-content: space-around;
 }
+
+@media only screen and (max-width: 600px) {
+    .nav-list, .logo {
+        display: none;
+    }
+
+    .skills {
+        grid-template-areas:
+        "title"
+        "description"
+        "html"
+        "css"
+        "js";
+    }
+
+    .badge {
+        width: 5rem;
+    }
+
+    .work {
+        grid-template-areas:
+        "title"
+        "project1"
+        "project2"
+        "project3";
+    }
+}
