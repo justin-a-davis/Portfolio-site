@@ -207,18 +207,12 @@ footer {
     justify-content: space-around;
 }
 
-@media only screen and (max-width: 600px) {
-    .nav-list, .logo {
-        display: none;
-    }
-
+@media only screen and (max-width: 750px) {
     .skills {
         grid-template-areas:
         "title"
-        "description"
-        "html"
-        "css"
-        "js";
+        "html css js"
+        "description";
     }
 
     .badge {
@@ -231,5 +225,11 @@ footer {
         "project1"
         "project2"
         "project3";
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .nav-list, .logo {
+        display: none;
     }
 }
