@@ -99,10 +99,14 @@ header {
     color: orchid;
 }
 
-.hero-title, .skills-title, .skills-description, .work-title {
+.hero-title, .skills-title, .skills-description, .work-title, .contact-title, .contact-email {
     position: relative;
     font-family: "Alien Encounters Italic";
     color: orange;
+}
+
+.contact-email {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .hero-title {
@@ -179,6 +183,13 @@ header {
 
 .example-3 {
     grid-area: project3;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
 }
 
 
