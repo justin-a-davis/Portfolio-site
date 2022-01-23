@@ -67,16 +67,15 @@ header {
 .hero {
     position: relative;
     width: 100vw;
-    height: 100vw;
+    height: 1280px;
+
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 1280px;
     background: url("/vapor_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,7 +86,7 @@ header {
 .hero-content {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 1280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,15 +95,50 @@ header {
 
 .hero-image {
     height: 400px;
-    border-radius: 100%;
     opacity: 0.6;
     color: orchid;
 }
 
-.hero-title {
+.hero-title, .skills-title {
+    position: relative;
     font-family: "Alien Encounters Italic";
-    color: orchid;
+    color: orange;
 }
+
+.hero-title {
+    left: -10%;
+    top: 5%;
+}
+
+.skills::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1280px;
+    background: url("/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-title {
+    margin: 0px;
+    top: 30vh;
+    font-size: 3rem;
+}
+
+.badge {
+    display: inline-block;
+    width: 15rem;
+    z-index: 1;
+}
+
 
 footer {
     text-align: center;
