@@ -14,8 +14,20 @@
 }
 
 body {
-    background-color: orchid;
     margin: 0px;
+}
+
+.bg-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("/vapor_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+    z-index: -1;
+    background-attachment: fixed;
 }
 
 .container {
@@ -30,7 +42,7 @@ header {
     left: 0px;
     right: 0px;
     opacity: 0.9;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -39,7 +51,7 @@ header {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5rem;
-    font-family: streamster
+    font-family: streamster;
 }
 
 .logo a {
@@ -71,22 +83,10 @@ header {
 
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1280px;
-    background: url("/vapor_background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: brightness(60%);
-}
-
 .hero-content {
     position: relative;
     width: 100vw;
-    height: 1280px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +99,7 @@ header {
     color: orchid;
 }
 
-.hero-title, .skills-title {
+.hero-title, .skills-title, .skills-description, .work-title {
     position: relative;
     font-family: "Alien Encounters Italic";
     color: orange;
@@ -110,27 +110,28 @@ header {
     top: 5%;
 }
 
-.skills::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1280px;
-    background: url("/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: brightness(60%);
-}
-
 .skills {
-    display: flex;
+    display: grid;
     justify-content: center;
+    align-items: center;
+    height: 50vh;
+    grid-template-areas:
+    "title title title"
+    "html css js"
+    "description description description";
+    gap: 2rem;
+    margin-bottom: 20rem;
 }
 
 .skills-title {
     margin: 0px;
-    top: 30vh;
     font-size: 3rem;
+    grid-area: title;
+}
+
+.skills-description {
+    grid-area: description;
+    justify-self: center;
 }
 
 .badge {
@@ -139,9 +140,59 @@ header {
     z-index: 1;
 }
 
+.html-badge {
+    grid-area: html;
+}
+
+.js-badge {
+    grid-area: js;
+}
+
+.css-badge {
+    grid-area: css;
+}
+
+.work {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-areas:
+    "title title title"
+    "project1 project2 project3";
+    margin-bottom: 20rem;
+}
+
+.example-1, .example-2, .example-3 {
+    width: 15rem;
+    height: 15rem;
+    background-color: white;
+    outline: 1px solid black;
+}
+
+.example-1 {
+    grid-area: project1;
+}
+
+.example-2 {
+    grid-area: project2;
+}
+
+.example-3 {
+    grid-area: project3;
+}
+
 
 footer {
     text-align: center;
     background-color: orchid;
     font-family: 'Times New Roman' serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    opacity: 0.8;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
